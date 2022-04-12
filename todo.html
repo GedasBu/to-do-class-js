@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+
+
+    <title>ToDo</title>
+    <script src="todo.js" defer></script>
+    <link rel="stylesheet" href="todo.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="statistic">
+            <span>Viso: </span>
+            <span id="totalTasks"> </span>
+        </div>
+        <div>
+            <span class="longLtr">Neatlikta:</span>
+            <span class="shortLtr">N:</span>
+            <span id="createdTasks"></span>
+        </div>
+        <div>
+            <span class="longLtr">Vykdoma:</span>
+            <span class="shortLtr">V:</span>
+            <span id=openTasks></span>
+        </div>
+        <div>
+            <span class="longLtr">Atlikta:</span>
+            <span class="shortLtr">A:</span>
+            <span id="doneTasks"></span>
+        </div>
+
+    </header>
+    <section id="newTask">
+        <label for="newTask"></label>
+        <input type="text" id="newTaskTxt" name="newTask" placeholder="Nauja užduotis..." onfocus=this.value=''></input>
+        <button id="create">Pridėti</button>
+    </section>
+
+  
+
+    <section>
+        <!-- Slider main container -->
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+
+                    <div id="created" class="tasks" >
+                        <table id="newTaskTable">
+                            <tr>
+
+                                <th class="firstTh">SUKURTA</th>
+
+                                <!-- <th class="action"></th> -->
+
+                            </tr>
+
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+                <div class="swiper-slide">
+
+                    <div id="open" class="tasks"  >
+                      
+                        <table id='openTaskTable'>
+                            <tr>
+                                <th class="firstTh">VYKDOMA</th>
+                                
+                                <!-- <th class="action"></th> -->
+
+                            </tr>
+
+
+                        </table>
+
+                    </div>
+
+                </div>
+                <div class="swiper-slide">
+                    <div id="done" class="tasks" >
+
+                        <table id="doneTaskTable">
+                            <tr>
+                                <th class="firstTh">ATLIKTA</th>
+
+                                <!-- <th class="action"></th> -->
+
+                            </tr>
+
+
+                        </table>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </section>
+    <div id="popUpBox">
+
+        <div id="box">
+
+            <h1>Ar Jūs rimtai?</h1>
+            <button class="btn-delete">TAIP</button>
+            <button class="btn-nodelete">NE</button>
+
+        </div>
+
+    </div>
+
+
+
+
+</body>
+
+</html>
